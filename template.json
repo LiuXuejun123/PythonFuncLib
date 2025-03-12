@@ -1,0 +1,30 @@
+{
+  "interfaces": [
+    {
+      "name": "AccrPedlPsd0",
+      "members": [
+        {"name": "AccrPedlPsd", "type": "Enum:NoYes1", "default": 0},
+        {"name": "AccrPedlPsdSts", "type": "Enum:NoYes1", "default": 0},
+        {"name": "AccrPedlRat", "type": "single", "default": 0.0, "range": [0.0, 1.0]},
+        {"name": "AccrPedlKickDownSts", "type": "Enum:NoYes1", "default": 0}
+      ]
+    },
+    {
+      "name": "EngineCtrl0",
+      "members": [
+        {"name": "EngineSpeed", "type": "single", "default": 0.0, "range": [0.0, 5000.0]},
+        {"name": "ThrottlePos", "type": "single", "default": 0.0, "range": [0.0, 100.0]},
+        {"name": "IgnitionSts", "type": "Enum:OffOn1", "default": 0}
+      ]
+    }
+  ],
+  "types": {
+    "Enum:NoYes1": {"values": {"No": 0, "Yes": 1}},
+    "Enum:OffOn1": {"values": {"Off": 0, "On": 1}},
+    "single": {"numpy_type": "float32"}
+  },
+  "time_config": {
+    "duration": 30,
+    "sample_interval": 0.025
+  }
+}
